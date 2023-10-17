@@ -10,28 +10,38 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   
   <body>
-    <div class="container">
-    <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1>
+    {% include 'nav.html' %}
     <img  class="img-fluid" id="banner" src="https://careers-webiste.jhimmaderal.repl.co/static/web1.jpg">
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">
+      {{company}} Careers
+    </h1>
+    
+  <div class = "row mb-4">
+    <div class= "col-md-6">
+      <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibussed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus.         </p>
+    </div>
+    <div class= "d-none d-md-block col-md-6">
+      <img src = "/static/employees.jpg" style="height:320px">
+    </div>
+  </div>
       
-    <h2 class="text-center mt-4">About Redd</h2>
-    <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus.</p>
-
-    <h1 class="text-center mt-2 mb-4">Open Openings</h1>
+  <h2 class="text-center mt-2 mb-4">Opening Jobs</h2>
     <div>
       {% for job in jobs %}
         {% include 'jobitem.html' %}
       {% endfor %}
     </div>
     <div class= "text-center">
-    <button class="btn btn-primary">Contact Us</button>
-      <p class="mt-4">Copyright 2022, Redd</p>
+    <a href = "mailto:jhimpaul01@gmail.com?subject=Question%20about%20Job%20Opening&body=Your%20Name%3A%20%3Ctype%20your%20name%3E%0D%0A%0D%0AYour%20Question%3A%20%3Ctype%20your%20Question%20Here%3E"type = "button" class="btn btn-primary">Contact Us</a>
     </div>
     </div>
+    {% include 'footer.html'%}
   </body>
 </html>
