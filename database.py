@@ -1,5 +1,5 @@
-from sqlalchemy import create_engine, text
 import os
+from sqlalchemy import create_engine, text
 
 db_connectionString = os.environ['DB_CONNECTION_STRING']
 
